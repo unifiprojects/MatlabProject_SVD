@@ -6,16 +6,12 @@ A = [2 3 5 7
     12 4 3 11
     12 4 3 78]
 
+[U, V, sigma] = aat_svd(A);
+checkAAT = U*sigma*V'
+
 [U, V, sigma] = ata_svd(A);
+checkATA = U*sigma*V'
+
 [Umatlab,Smatlab,Vmatlab] = svd(A);
+checkSVD = Umatlab*Smatlab*Vmatlab'
 
-sigma
-Smatlab
-U
-Umatlab
-V
-Vmatlab
-
-A
-checkA = U*sigma*V'
-checkB = Umatlab*Smatlab*Vmatlab'
