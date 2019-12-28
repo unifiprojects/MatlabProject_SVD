@@ -57,13 +57,11 @@ while length(sigma) >= i && sigma(i) ~= 0
 end
 rank = i - 1;
 
-% notare che per k = rank (nel ciclo qui escluso) la matrice Ak risulta
-% uguale ad A originaria
 for k = 1:rank-1
     Ak = zeros(size(mat));
     for i = 1:k
         Ak = Ak + sigma(i)*U(:,i)*V(:,i)';
     end
     subplot(ceil(sqrt(rank)), ceil(sqrt(rank)), k)
-    imshow(Ak, 'ciao')
+    imshow(Ak)
 end
