@@ -1,4 +1,4 @@
-function [U, V, sigma] = ata_svd(A)
+function [U, sigma, V] = ata_svd(A)
     % si costruisce la SVD di AtA usando direttamente gli autovalori ed
     % autovettori (calcolati per comodita' attraverso eig() )
     num_righe_A = size(A,1);
